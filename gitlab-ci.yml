@@ -10,7 +10,9 @@ before_script:
 
 test:
   stage: test
-  script: gradle test integrationTest jacocoTestReport
+  script: 
+    - gradle test integrationTest jacocoTestReport
+    - make test-coveralls
   cache:
     paths: [node_modules/]
 
