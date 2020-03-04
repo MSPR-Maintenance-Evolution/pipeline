@@ -11,6 +11,8 @@ before_script:
 test:
   stage: test
   script: gradle test
+  cache:
+    paths: [node_modules/]
 
 build:
   stage: build
